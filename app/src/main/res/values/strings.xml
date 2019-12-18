@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MotionLayoutEditor</string>
+    <string name="mid_view">Mid View</string>
+    <string name="top_view">Top View</string>
+    <string name="bottom_view">Bottom View</string>
+</resources>
