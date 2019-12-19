@@ -6,7 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="1000" >
        <KeyFrameSet>
            <KeyAttribute
                android:scaleX="2"
@@ -23,7 +23,6 @@
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/topView" />
         <OnSwipe motion:dragDirection="dragRight" />
-
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -39,7 +38,9 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/topView"
-            motion:layout_constraintHorizontal_bias="1.0" />
+            motion:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
         <Constraint
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
@@ -49,7 +50,9 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/bottomView"
-            motion:layout_constraintHorizontal_bias="0.0" />
+            motion:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp" />
     </ConstraintSet>
     <ConstraintSet android:id="@+id/altEnd" >
         <Constraint
@@ -57,11 +60,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintVertical_bias="0.029999971"
+            motion:layout_constraintVertical_bias="0.0"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/topView"
-            motion:layout_constraintHorizontal_bias="0.0" />
+            motion:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
         <Constraint
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
@@ -71,11 +76,14 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/bottomView"
-            motion:layout_constraintHorizontal_bias="1.0" />
+            motion:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/altEnd"
+        motion:motionInterpolator="easeInOut"
         motion:duration="1000">
         <OnClick motion:targetId="@+id/bottomView" />
     </Transition>
@@ -90,7 +98,8 @@
             android:id="@+id/topView"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintHorizontal_bias="0.0"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" />
         <Constraint
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
@@ -99,7 +108,8 @@
             android:id="@+id/bottomView"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintHorizontal_bias="1.0"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="16dp" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/altEnd"
